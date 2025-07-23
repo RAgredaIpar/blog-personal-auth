@@ -1,0 +1,30 @@
+<nav class="bg-white shadow-md px-4 py-3">
+  <div class="flex items-center justify-between">
+    <a class="text-2x1 font-bold text-gray-800" routerLink="/">Echoo</a>
+
+    <button
+      class="md:hidden text-gray-600 focus:outline-none"
+      (click)="toggleMenu()"
+    >
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    </button>
+
+    <ul class="hidden md:flex gap-6 text-sm font-medium text-gray-600">
+      <li><a routerLink="/posts" routerLinkActive="text-blue-600">Home</a></li>
+      <li><a routerLink="/auth/login" routerLinkActive="text-blue-600">Login</a></li>
+      <li><a routerLink="/auth/register" routerLinkActive="text-blue-600">Register</a></li>
+    </ul>
+  </div>
+
+  <ul
+    class="mt-2 space-y-2 text-sm font-medium text-gray-600 md:hidden"
+    *ngIf="isMenuOpen"
+  >
+    <li><a routerLink="/posts" (click)="toggleMenu()">Home</a></li>
+    <li><a routerLink="/auth/login" (click)="toggleMenu()">Login</a></li>
+    <li><a routerLink="/auth/register" (click)="toggleMenu()">Register</a></li>
+  </ul>
+</nav>
