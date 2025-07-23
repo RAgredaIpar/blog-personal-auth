@@ -1,0 +1,15 @@
+# Angular
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/
+
+# IntelliJ
+backend/.idea/
+backend/target/
+backend/.classpath
+backend/.project
+
+# Gen
+.env
+.DS_Store
+.vscode
